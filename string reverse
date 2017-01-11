@@ -1,0 +1,15 @@
+package gullu;
+import java.util.Scanner;
+public class Replace
+{
+	public static void main(String[] args) {
+       String gn,reverse="";
+       Scanner sc=new Scanner(System.in);
+       System.out.println("enter a string to reverse");
+       gn=sc.nextLine();
+       int length=gn.length();
+       for(int i=length-1;i>=0;i--)
+    	   reverse=reverse+gn.charAt(i);
+       System.out.println("reverse of entered string is:"+reverse);
+	}
+}
