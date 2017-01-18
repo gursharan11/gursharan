@@ -1,0 +1,46 @@
+package gullu;
+import java.util.ArrayList;
+import java.util.Iterator;
+public class Student1 {
+	public void accept()
+	{
+		ArrayList<Student>List=new ArrayList<Student>();
+		Student obj=new Student(1,"Anu",89);
+		Student obj1=new Student(2,"Chirag",69);
+		Student obj2=new Student(3,"Vivek",99);
+		Student obj3=new Student(4,"Gurpreet",79);
+		Student obj4=new Student(5,"Harry",87);
+		Student obj5=new Student(6,"inder",78);
+		
+		Iterator itr=List.iterator();
+		while(itr.hasNext()){
+			System.out.println(itr.next());
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+      Student1 oo=new Student1();
+      oo.accept();
+	}
+
+}
+
+Output
+stid is1
+name isAnu
+marks89
+stid is2
+name isChirag
+marks69
+stid is3
+name isVivek
+marks99
+stid is4
+name isGurpreet
+marks79
+stid is5
+name isHarry
+marks87
+stid is6
+name isinder
+marks78
