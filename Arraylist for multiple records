@@ -1,0 +1,62 @@
+package gullu;
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+import javax.xml.bind.helpers.ParseConversionEventImpl;
+	public class Arraylistexample {
+		
+		ArrayList<Stu> list;
+		Scanner sc;
+		
+		//Const
+		public Arraylistexample()
+		{
+			list= new ArrayList<Stu>();
+			sc=new Scanner(System.in);
+		}
+		
+		//ADD Stu on run time
+		public void AddStudent()
+		{
+			String check="N";
+			do
+			{
+				Stu s=new Stu();
+				System.out.print("Enter Name : ");
+				s.name=sc.nextLine();
+				
+				System.out.print("Enter RollNo : ");
+				s.rollno=Integer.parseInt(sc.nextLine());
+				
+				System.out.print("Enter Age : ");
+				s.age=Integer.parseInt(sc.nextLine());
+				
+				//Adding in ArrayList
+				list.add(s);
+				
+				System.out.println("To Enter More Records type 'Y' ");
+				check=sc.nextLine();
+				
+			}while(check.equalsIgnoreCase("y"));
+			
+		}
+		
+		// Display the ArrayList
+		public void implement()
+		{
+			Iterator<Stu> itr=list.iterator();
+			while(itr.hasNext())
+			{
+				Stu s=itr.next();
+			    System.out.println(s.name +" : "+s.rollno +" : "+s.age);
+			}
+		}
+		public static void main(String[] args) {
+		    // TODO Auto-generated method stub
+		    Arraylistexample oo=new Arraylistexample();
+		    oo.AddStudent();
+		    oo.implement();
+		}
+
+	}
