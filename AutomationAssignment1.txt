@@ -1,0 +1,88 @@
+1. What is the difference between Manual Testing and Automation Testing?
+Ans. 
+                 Manual Testing
+1. Manual Testing is a process which is done manually.
+3. In Manual Testing we find more bugs than automation by Error Guessing.
+2. Manual Testing is a start of Testing, without this testing we can’t start Automation Testing.
+4. It takes lot of time.
+5. Manual Testing would be run sequentially.
+6. Regression Testing process is tough in Manual Testing
+7. It is not expensive.
+8. It gives low accuracy result.
+9. It is considered as low quality.
+10. It is considered as less reliable.
+11. No need of programming in Manual Testing.
+12. It is done without interaction of any Tool.	
+                Automation Testing
+1. Automation Testing is a process which is done by the help of automated tools.
+2. Automation Testing is a continuous part of Manual Testing
+3. In Automation Testing we test the repetitive functionalities of the application.
+4. It takes less time.
+5. Automation Testing is done on different machines at same time.
+6. Regression Testing process is easy in Automation Testing by Tools.
+7. It is expensive.
+8.It gives high accuracy result.
+9. It is considered as high quality.	
+10. It is considered as more reliable.	
+11. Need of programming is must in Automation Testing.	
+12. It is always done using tools.
+
+2. What is Automation?
+Ans.We define automation as the creation and application of technology to monitor and
+     control the production and delivery of products and services.
+
+3. Why to Automate a Project?
+Ans.1. Automated Software testing saves time and money.
+2. testing improves accuracy.
+3. Automation does what manual testing cannot.
+4. Automated QA testing helps developers and testers.
+
+4. What are the advantages of Automation?
+Ans.Reliable: Tests perform precisely the same operations each time they are run, thereby eliminating human error 
+Repeatable: You can test how the software reacts under repeated execution of the same operations. 
+Programmable: You can program sophisticated tests that bring out hidden information from the application. 
+
+Comprehensive: You can build a suite of tests that covers every feature in your application. 
+Reusable: You can reuse tests on different versions of an application, even if the user interface changes. 
+Better Quality Software: Because you can run more tests in less time with fewer resources 
+Fast: Automated Tools run tests significantly faster than human users. 
+Cost Reduction: As the number of resources for regression test are reduced.
+Choosing the right tools for the job and targeting the right areas of the organization to deploy them can only realize these benefits. The right areas where the automation fit must be chosen.
+
+5.Name few test Automation Tools ?
+Ans.Tools 
+Selenium Ide , RC
+Mercury :- QTP ( UFT)  , WinRunner
+IBM :- Rational Robot
+Borland :- Silk Test
+
+6.What are the benefits of Automation
+Ans.Saves time – faster releases: 
+Improves accuracy – higher customer satisfaction: 
+More test coverage – less risk 
+Faster test results – bugs fixed earlier: 
+Enhances load testing capacity – real world simulation 
+Increases morale – higher productivity 
+
+7. What is Framework ?
+Ans. A set of guidelines like coding standards , test-data handling , object repository treatment etc...
+ which when followed during automation scripting produce beneficial outcomes like increase code re-usage , higher portability , 
+reduced script maintenance cost etc 
+
+8.What are the types of frameworks?
+Ans. 1) Linear Scripting
+
+2)The Test Library Architecture Framework.
+
+3)The Data-Driven Testing Framework.
+
+4)The Keyword-Driven or Table-Driven Testing Framework.
+
+5)The Hybrid Test Automation Framework.
+
+9.What is Keyword driven and Code Driven automation testing?
+Ans. Keyword-driven testing, also known as table-driven testing or action word based testing, is a software testing methodology suitable for both manual and automated testing. This method separates the documentation of test cases -including the data to use- from the prescription of the way the test cases are executed. As a result it separates the test creation process into two distinct stages: a design and development stage, and an execution stage. 
+The Code driven testing also known as test driven development's first step is to add a test, which is enough for code to fail. Next, we execute out tests usually a complete test suite or a subset of tests to accelerate testing to ensure that the new test fails. Then, the code is updated to make it pass the new tests. Then, the fourth step is to execute the tests again. If they fail, we need to update the code and retest.
+ Once the test passes, the next step is to go through the same process again for the next development item. 
+
+ 
