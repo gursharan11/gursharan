@@ -1,0 +1,24 @@
+package facebookProject;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+public class count_Images {
+	public void count()
+	{
+		WebDriver driver=new FirefoxDriver();
+		driver.get("http://www.w3schools.com/html/html_images.asp");
+		driver.manage().window().maximize();
+		java.util.List<WebElement> Links=driver.findElements(By.tagName("img"));
+		for(int i=0;i<Links.size();i++)
+		{
+			System.out.println(Links.get(i).getAttribute("src"));
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		count_Images obj=new count_Images();
+		obj.count();
+	}
+}
