@@ -1,0 +1,38 @@
+package facebookProject;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+public class Check_elements {
+        WebElement username,password;
+        public void Check()
+        {
+        	WebDriver driver=new FirefoxDriver();
+        	driver.get("https://www.facebook.com/");
+        	driver.manage().window().maximize();
+        	username=driver.findElement(By.id("email"));
+        	if(username.isDisplayed())
+        	{
+        		System.out.println("Username field is available");
+        	}
+        	else
+        	{
+        		System.out.println("Username field is not avaliable");
+        	}
+        	password=driver.findElement(By.id("pass"));
+        	if(password.isDisplayed())
+        	{
+        		System.out.println("password field is available");
+        	}
+        	else
+        	{
+        		System.out.println("password field is not avaliable");
+        	}
+        }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+         Check_elements obj=new Check_elements();
+         obj.Check();
+	}
+
+}
