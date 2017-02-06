@@ -1,0 +1,42 @@
+package facebookProject;
+import java.util.ArrayList;
+import java.util.List;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
+public class Count_Brokenimages {
+	public void count()
+	{
+		WebDriver driver=new FirefoxDriver();
+		EventFiringWebDriver eventFiringWebDriver=new EventFiringWebDriver(driver);
+		 driver.manage().window().maximize();
+		 driver.get("https://www.google.com/");	 
+		List <WebElement>allImages=eventFiringWebDriver.findElements(By.tagName("img"));
+		 int countBrokenimages=0;
+		 List<String>BrokenimagesUrl=new ArrayList<String>();
+		 String script="return(typeof arguments[0].naturalwidth!=\"undefined\"&& arguments[0].naturalwidth>0)";
+			for(WebElement image:allImages)
+			{
+				Object imgStatus=eventFiringWebDriver.executeScript(script,image);
+				if(imgStatus.equals(false))
+				{
+					String currentImageUrl=image.getAttribute("src");
+					String imageUrl=currentImageUrl;
+					BrokenimagesUrl.add(imageUrl);
+					countBrokenimages++;
+				}
+			}
+			System.out.println(countBrokenimages);
+			for(String a:BrokenimagesUrl)
+			{
+				System.out.println(a);
+			}		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+      Count_Brokenimages obj=new Count_Brokenimages();
+      obj.count();
+	}
+}
