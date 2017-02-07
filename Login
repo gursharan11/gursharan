@@ -1,0 +1,23 @@
+package facebookProject;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+public class Login {
+	public void run() throws InterruptedException
+	{
+		WebDriver driver=new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.get("https://accounts.google.com/");
+		driver.findElement(By.name("Email")).sendKeys("gursharan12kaur@gmail.com");
+	    driver.findElement(By.id("next")).click();
+		Thread.sleep(7000);
+		driver.findElement(By.name("Passwd")).sendKeys("1234");
+        driver.findElement(By.id("signIn")).click();
+	}
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+        Login obj=new Login();
+        obj.run();
+	}
+}
