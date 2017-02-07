@@ -1,0 +1,22 @@
+package facebookProject;
+import java.util.List;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+public class Calculatetextboxes {
+	public void count()
+	{
+		WebDriver driver=new FirefoxDriver();
+		driver.get("http://www.facebook.com");
+		driver.manage().window().maximize();
+		List<WebElement> textboxes=driver.findElements(By.xpath("//input[@type='text']"));
+			System.out.println("no of text boxes="+textboxes.size());
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+          Calculatetextboxes obj=new Calculatetextboxes();
+          obj.count();
+	}
+}
