@@ -1,0 +1,30 @@
+package seleniumDemo;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class DemoSel {
+
+	public static void main(String[] args) throws InterruptedException {
+		WebElement ele;
+		// TODO Auto-generated method stub
+System.setProperty("webdriver.gecko.driver", "D:\\selenium\\software\\selenium\\geckodriver.exe");
+WebDriver drive=new FirefoxDriver();
+drive.get("http://demo.nopcommerce.com/login");
+drive.manage().window().maximize();
+drive.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+drive.findElement(By.id("Email")).sendKeys("abcd@gmail.com");
+Thread.sleep(7000);
+drive.findElement(By.id("Password")).sendKeys("123456");
+//drive.findElement(By.xpath("//input[contains(text(),'A few of our most popular courses')).click();
+	drive.findElement(By.xpath("html/body/div[5]/div[3]/div/div/div/div[2]/div[1]/div[2]/form/div[3]/input")).click();
+	
+	
+	}
+
+}
